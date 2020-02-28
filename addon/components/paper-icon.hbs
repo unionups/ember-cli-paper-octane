@@ -1,0 +1,10 @@
+<md-icon class="paper-icon md-font material-icons md-default-theme {{if @spin 'md-spin'}} {{if @spin-reverse 'md-spin-reverse'}}" 
+style={{if @size (concat "height:" @size "px; min-height:" @size "px; min-width:" @size "px; font-size:" @size "px; line-height:" @size "px;")}}
+md-font-icon={{@name}} aria-label={{@name}}
+...attributes>
+{{#if (has-block)}}
+    {{yield}}
+{{else}}
+    {{@name}}
+{{/if}}
+</md-icon>
