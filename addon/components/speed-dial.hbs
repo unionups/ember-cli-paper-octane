@@ -1,1 +1,9 @@
-{{yield}}
+<md-fab-speed-dial 
+    class="md-{{this.direction}} {{if @fling 'md-fling' 'md-scale'}} {{if @hoverFull 'md-hover-full'}} {{if this.isOpen "md-is-open"}}" 
+    ...attributes
+    {{on 'mouseenter' this.mouseEnter}}
+    {{on 'mouseleave' this.mouseLeave}}
+    {{on 'click' this.click}}
+    {{did-insert this.init}}>
+    {{yield}}
+</md-fab-speed-dial>

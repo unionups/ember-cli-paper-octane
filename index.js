@@ -8,26 +8,27 @@ const Funnel = require('broccoli-funnel');
 const AngularScssFilter = require('./lib/angular-scss-filter');
 
 const componentDependencies = {
-  'paper-icon': {
+  'icon': {
     styles: [
       'components/icon/icon.scss',
       'components/icon/icon-theme.scss'
     ]
   },
-  'paper-button': {
+  'button': {
     styles: [
       'components/button/button.scss',
       'components/button/button-theme.scss'
     ]
   },
-  'paper-speed-dial': {
+  'speed-dial': {
     styles: [
       'components/fabSpeedDial/fabSpeedDial.scss'
+    ],
+    dependencies: [
+      'speed-dial/trigger',
+      'speed-dial/action',
+      'speed-dial/wrapper'
     ]
-    // dependencies: [
-    //   'paper-speed-dial-trigger',
-    //   'paper-speed-dial-actions'
-    // ]
   },
 };
 
@@ -80,8 +81,8 @@ module.exports = {
 
         let links = '<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,800,400italic">';
 
-        let paperIconNotWhitelisted = whitelist.length && !whitelist.includes('paper-icon');
-        let paperIconBlacklisted = blacklist.length && blacklist.includes('paper-icon');
+        let paperIconNotWhitelisted = whitelist.length && !whitelist.includes('icon');
+        let paperIconBlacklisted = blacklist.length && blacklist.includes('icon');
 
         if (paperIconNotWhitelisted || paperIconBlacklisted) {
           return links;
