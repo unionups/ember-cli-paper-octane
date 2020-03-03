@@ -1,6 +1,10 @@
 <div class="md-fab-action-item" >
-    <button  class="md-default-theme md-button md-fab md-mini md-ink-ripple" type="button" ...attributes>                      
+    {{!-- <button  class="md-default-theme md-button md-fab md-mini md-ink-ripple" type="button" ...attributes>                      
         {{yield}}
         <div class="md-ripple-container"></div>
-    </button>
+    </button> --}}
+    <LinkTo @route={{@route}} class="md-default-theme md-button md-fab md-mini md-ink-ripple" type="button" ...attributes>
+        {{yield}}
+        <div class="md-ripple-container"></div>
+    </LinkTo>
 </div>

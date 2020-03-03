@@ -30,6 +30,12 @@ const componentDependencies = {
       'speed-dial/wrapper'
     ]
   },
+  'progress-circular': {
+    styles: [
+      'components/progressCircular/progress-circular.scss',
+      'components/progressCircular/progress-circular-theme.scss'
+    ]
+  }
 };
 
 module.exports = {

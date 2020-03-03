@@ -1,0 +1,6 @@
+<md-progress-circular class="md-default-theme {{if @accent 'md-accent'}} {{if @warn 'md-warn'}} {{if @primary 'md-primary'}} {{if @value 'md-mode-determinate' 'md-mode-indeterminate'}} {{if @disabled '_md-progress-circular-disabled'}}"  style="width:{{this.diameter}}px;height:{{this.diameter}}px;"  md-mode={{if @value 'determinate' 'indeterminate'}} 
+                      {{did-insert this.startAnimation}} {{will-destroy this.stopAnimation}}  ...attributes>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {{this.diameter}} {{this.diameter}}"  style="width:{{this.diameter}}px; height:{{this.diameter}}px; transform-origin: {{this.radius}}px {{this.radius}}px {{this.radius}}px">
+        <path fill="none" style="stroke-width: {{this.strokeWidth}}px" stroke-dasharray={{this.strokeDasharray}} d={{this.d}}></path>
+    </svg>
+</md-progress-circular>
